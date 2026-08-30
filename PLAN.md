@@ -72,9 +72,9 @@ We will provide a free-text box, and also an option for users who don't know wha
 
 **Done means:** When given the sample text "something added in my bill", the function returns the category "Costs and charges".
 
-**Ticket 4 - Unit tests for triage logic**  
+**Ticket 4 - Unit tests for triage logic**
 
-**Done means:** Automated tests exist for all 7 categories plus the fallback case (8 tests total), and all tests pass.
+**Done means:** Automated tests exist for the most important behaviours, and all tests pass.
 
 **Ticket 5 - Backend API endpoint** (the triage function is connected to an Express route so the frontend can call it)  
 
