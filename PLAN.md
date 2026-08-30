@@ -108,7 +108,13 @@ We will provide a free-text box, and also an option for users who don't know wha
 - **Testing**: Keyword matching might miss inputs that don't use expected words. Mitigated by the fallback option (dropdown), but with more time, a larger set of test phrases would help refine the keyword list.
 - **Accessibility**: Limited manual accessibility testing done in the time available (keyboard nav, labels, focus). A full screen-reader test with real assistive tech would be needed for production.
 - **Data**: No personal data is collected in this prototype, but if this grew into a real product, careful thought would be needed around what enquiry data (if any) is stored and for how long.
-- **Security**: Basic input handling (empty/invalid text) is covered, but a production version would need rate-limiting, input sanitisation, and proper error logging.
+- **Security**: Basic input handling (empty/invalid text) is covered, but a production version would need rate-limiting, input sanitisation, and proper error logging.  
+
+**What a code reviewer should scrutinize"**:
+
+- How the triage logic handles text containing keywords from multiple categories (e.g., "dispute about my service charge bill" matches both "Disputes" and "Costs and charges") - the matching order/priority needs to be intentional, not accidental.
+- How the function handles empty or whitespace-only input, to ensure it doesn't crash or return an unexpected result.
+- Whether keyword matching is case-sensitive - e.g., whether "BILL" or "Bill" matches the same as "bill".
 
 ## Scope deliberately left out
 
