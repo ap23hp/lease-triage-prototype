@@ -39,6 +39,7 @@ We will test the triage logic with a handful of sample scenarios to validate tha
 I am scoping this prototype to leaseholders only.
 
 Based on LEASE's website, I used their 7 leasehold topics as first-slice categories:
+For 3 categories (Building management, Lease extension, Costs and charges), I added specific sub-scenarios with their own next steps, after finding a single generic next step wasn't specific enough. The remaining 4 categories use one next step each, to keep the first slice manageable within the time available.
 
 - **Building management**: how buildings are managed, including repairs and fire safety
 - **Buying and selling**: the process of buying or selling a leasehold flat

@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Building management",
+    "explanation": "How buildings are managed, including repairs and fire safety.",
+    "subScenarios": [
+      {
+        "keywords": ["insurance", "buildings insurance"],
+        "nextStep": "Check who is responsible for buildings insurance under your lease. LEASE's guidance explains your rights and how to challenge the cost if you think it's unreasonable."
+      },
+      {
+        "keywords": ["fire safety", "fire door", "cladding", "fire risk"],
+        "nextStep": "Ask your landlord or managing agent for a copy of your building's fire risk assessment — LEASE has a template letter for this."
+      },
+      {
+        "keywords": ["property manager", "managing agent", "unhappy with management", "change manager"],
+        "nextStep": "Raise the issue with your landlord or managing agent first. If that doesn't help, you can complain to a redress scheme, or look into changing your property manager."
+      },
+      {
+        "keywords": ["tenants association", "residents association"],
+        "nextStep": "You can form a tenants' association informally, or apply for recognised status to gain legal rights like appointing a surveyor or being consulted on major works."
+      },
+      {
+        "keywords": ["repair", "repairs", "maintenance", "leak", "water leak"],
+        "nextStep": "Check your lease to see who is responsible for the repair. If it's your landlord's responsibility and they haven't acted, LEASE's guidance on repairs can help."
+      }
+    ],
+    "fallbackNextStep": "Building management issues can cover many things, from insurance to repairs to fire safety. LEASE's building management guidance can help you find advice for your specific situation."
+  },
+  {
+    "name": "Lease extension",
+    "explanation": "Extending the number of years left on a lease.",
+    "subScenarios": [
+      {
+        "keywords": ["flat", "apartment"],
+        "nextStep": "Check how many years are left on your lease — if it's below 80 years, costs rise sharply, so it's worth acting soon. You can start by asking your landlord informally, or use a formal legal process if they don't respond."
+      },
+      {
+        "keywords": ["house", "leasehold house"],
+        "nextStep": "As a leasehold house owner, you may have the right to extend your lease by 50 years or buy the freehold instead. Start by checking if you qualify, then serve formal notice to your landlord."
+      },
+      {
+        "keywords": ["cost", "how much", "price", "calculator", "valuation"],
+        "nextStep": "Use LEASE's free lease extension calculator to estimate what you'd need to pay, based on your lease length and property value."
+      }
+    ],
+    "fallbackNextStep": "Check how many years are left on your lease — this affects both cost and urgency. LEASE's lease extension calculator can help you understand your options."
+  },
+  {
+    "name": "Costs and charges",
+    "explanation": "Money a leaseholder is asked to pay, like service charges or ground rent.",
+    "subScenarios": [
+      {
+        "keywords": ["service charge"],
+        "nextStep": "Ask your landlord for a written summary of how the service charge was calculated — LEASE has a template letter for this. If you still think it's unfair, you can challenge it at a tribunal."
+      },
+      {
+        "keywords": ["ground rent"],
+        "nextStep": "Check your lease to see how your ground rent is calculated and whether it can increase. If it's causing problems, LEASE's guidance explains ways to reduce high ground rent."
+      },
+      {
+        "keywords": ["admin charge", "administration charge"],
+        "nextStep": "Administration charges must be reasonable and allowed by your lease. If you think a charge is unfair, you can challenge it in the same way as a service charge."
+      },
+      {
+        "keywords": ["section 20", "major works", "consultation"],
+        "nextStep": "Check LEASE's guidance on Section 20 consultation rights — if your landlord hasn't followed the consultation process for major works, you may have options to challenge the cost."
+      }
+    ],
+    "fallbackNextStep": "Costs and charges can include service charges, ground rent, and administration charges. LEASE's guidance can help you find advice for your specific charge."
+  },
+  {
+    "name": "Buying and selling",
+    "explanation": "The process of buying or selling a leasehold flat.",
+    "nextStep": "Before buying, check the lease length, ground rent, and service charges — these affect both cost and mortgage eligibility. If you're a flat owner wanting to buy your building's freehold, check LEASE's guidance on collective enfranchisement to see if you qualify."
+  },
+  {
+    "name": "Disputes",
+    "explanation": "Problems with a landlord or managing agent, and how to resolve them.",
+    "nextStep": "Write to your landlord or managing agent explaining the problem and asking them to resolve it. If they don't respond or the issue continues, LEASE offers free initial advice to help you decide whether mediation or a tribunal application is the right next step."
+  },
+  {
+    "name": "Leasehold essentials",
+    "explanation": "General rights and responsibilities of being a leaseholder.",
+    "nextStep": "Check LEASE's guide to leaseholder rights and responsibilities to understand what your lease covers. If you need to confirm who your landlord is, or have a specific question, LEASE offers free initial advice."
+  },
+  {
+    "name": "Shared ownership",
+    "explanation": "Buying or owning a share of a property rather than all of it.",
+    "nextStep": "If you want to buy a bigger share of your home (staircasing), check LEASE's guidance on the process and costs. If you're struggling with shared ownership or want to sell, their guidance on leaving shared ownership covers your options."
+  }
+]
