@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const triageEnquiry = require('./triage.js');
 
 const app = express();
 const PORT = 3001;
@@ -13,4 +14,10 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+app.post('/triage', (req, res) => {
+  const userText = req.body.text;
+  const result = triageEnquiry(userText);
+  res.json(result);
 });
