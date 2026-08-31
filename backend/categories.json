@@ -62,7 +62,7 @@
     "explanation": "Extending the number of years left on a lease.",
     "subScenarios": [
       {
-        "keywords": ["flat", "apartment", "extend my flat lease"],
+        "keywords": ["extend my flat lease", "extend my lease", "flat lease extension", "extending my flat"],
         "nextStep": "Check how many years are left on your lease — if it's below 80 years, costs rise sharply, so it's worth acting soon. You can start by asking your landlord informally, or use a formal legal process if they don't respond."
       },
       {

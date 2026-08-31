@@ -272,3 +272,9 @@ button:focus-visible {
   white-space: nowrap;
   border: 0;
 }
+.result-explanation {
+  margin: 14px 0 0;
+  font-size: 19px;
+  line-height: 1.65;
+  color: #23303d;
+}

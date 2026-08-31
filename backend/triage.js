@@ -10,7 +10,8 @@ function triageEnquiry(userText) {
         if (subCategory.keywords.some(keyword => userText.includes(keyword))) {
           return {
             category: category.name,
-            nextStep: subCategory.nextStep
+            nextStep: subCategory.nextStep,
+                explanation: category.explanation
           };
         }
       }
@@ -18,7 +19,8 @@ function triageEnquiry(userText) {
       if (category.keywords.some(keyword => userText.includes(keyword))) {
         return {
           category: category.name,
-          nextStep: category.nextStep
+          nextStep: category.nextStep,
+          explanation: category.explanation
         };
       }
     }
