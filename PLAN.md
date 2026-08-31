@@ -78,7 +78,7 @@ We will provide a free-text box, and also an option for users who don't know wha
 
 **Ticket 5 - Backend API endpoint** (the triage function is connected to an Express route so the frontend can call it)  
 
-**Done means:** Sending a POST request with the text "money is added to my bill" to the endpoint returns a response containing the category "Costs and charges", along with its explanation and next step.
+**Done means:** Sending a POST request with the text "my service charge went up" to the endpoint returns a response containing the category "Costs and charges", along with its next step.
 
 **Ticket 6 - Frontend form** (UI only, not connected to backend yet)  
 
