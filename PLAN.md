@@ -51,7 +51,7 @@ For 3 categories (Building management, Lease extension, Costs and charges), I ad
 
 ### User needs assumption
 
-We will provide a free-text box, and also an option for users who don't know what to type, because sometimes a stressed user might not have the right words to describe their situation.
+We will provide a free-text box, and also a set of example questions users can click to pre-fill the text box, because sometimes a stressed user might not have the right words to describe their situation. 
 
 ### Advice and safety assumptions
 
@@ -82,23 +82,24 @@ We will provide a free-text box, and also an option for users who don't know wha
 
 **Ticket 6 - Frontend form** (UI only, not connected to backend yet)  
 
-**Done means:** The page displays a free-text input where the user can describe their situation, and a dropdown with the 7 categories as options.
+**Done means:** 
+Done means: The page displays a free-text input where the user can describe their situation, and a set of clickable example questions that pre-fill the text input.
 
 **Ticket 7 - Connect frontend to backend**  
 
-**Done means:** After the user submits their text (or selects a category from the dropdown), the screen displays the category name, explanation, and next step.
+**Done means:** After the user submits their text, the screen displays the category name, explanation, and next step.
 
-**Ticket 8 - Fallback/edge case flow**  
+**Ticket 8 - Fallback/edge case flow**
 
-**Done means:** When the free-text input doesn't match any category, the screen displays a message (e.g., "Sorry, we couldn't identify your category"), and the user can then use the dropdown to select a category manually.
+**Done means:** When the free-text input doesn't match any category, the screen displays a message (e.g., "Sorry, we couldn't identify your category"), and the user can then click one of the example questions to try again.
 
 **Ticket 9 - Manual testing**  
 
 **Done means:** All 7 categories and the fallback case tested manually through the actual UI, with correct results shown each time.
 
-**Ticket 10a - Accessibility pass**  
+**Ticket 10a - Accessibility pass**
 
-**Done means:** Accessibility check completed — flow tested by navigating with keyboard only, labels added to the text input and dropdown, focus moves to the result section when it appears, and the fallback error message is clear and readable.
+**Done means:** Accessibility check completed — flow tested by navigating with keyboard only, labels added to the text input and example-question buttons, focus moves to the result section when it appears, and the fallback error message is clear and readable.
 
 **Ticket 10b - Security/data & code review pass**  
 
@@ -106,7 +107,7 @@ We will provide a free-text box, and also an option for users who don't know wha
 
 ## 4. Risks and Review Areas
 
-- **Testing**: Keyword matching might miss inputs that don't use expected words. Mitigated by the fallback option (dropdown), but with more time, a larger set of test phrases would help refine the keyword list.
+- **Testing**: Keyword matching might miss inputs that don't use expected words. Mitigated by the example-question buttons as a fallback, but with more time, a larger set of test phrases would help refine the keyword list.
 - **Accessibility**: Limited manual accessibility testing done in the time available (keyboard nav, labels, focus). A full screen-reader test with real assistive tech would be needed for production.
 - **Data**: No personal data is collected in this prototype, but if this grew into a real product, careful thought would be needed around what enquiry data (if any) is stored and for how long.
 - **Security**: Basic input handling (empty/invalid text) is covered, but a production version would need rate-limiting, input sanitisation, and proper error logging.  
