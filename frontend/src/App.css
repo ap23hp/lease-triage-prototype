@@ -278,3 +278,16 @@ button:focus-visible {
   line-height: 1.65;
   color: #23303d;
 }
+
+.multi-match-notice {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: #fdf6e3;
+  border-left: 4px solid #c30f3c;
+}
+
+.multi-match-notice p {
+  margin: 0;
+  font-size: 18px;
+  color: #5b4a1a;
+}

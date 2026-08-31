@@ -111,6 +111,11 @@ function App() {
                 General information only, not legal advice. If this category
                 doesn't fit, try one of the example questions below.
               </p>
+       {result.hasMultipleMatches && (
+  <div className="multi-match-notice">
+    <p>This may also relate to other issues — try describing each part of your situation separately for more specific guidance.</p>
+  </div>
+)}
             </section>
           )}
 
