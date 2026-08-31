@@ -1,4 +1,4 @@
-const categories = require('./categories.json');
+const categories = require("./categories.json");
 function triageEnquiry(userText) {
   const matches = [];
 
@@ -9,7 +9,9 @@ function triageEnquiry(userText) {
       for (let j = 0; j < category.subScenarios.length; j++) {
         const subCategory = category.subScenarios[j];
         if (
-          subCategory.keywords.some((keyword) => userText.includes(keyword))
+          subCategory.keywords.some((keyword) =>
+            userText.toLowerCase().includes(keyword.toLowerCase()),
+          )
         ) {
           matches.push({
             category: category.name,
@@ -19,7 +21,11 @@ function triageEnquiry(userText) {
         }
       }
     } else {
-      if (category.keywords.some((keyword) => userText.includes(keyword))) {
+      if (
+        category.keywords.some((keyword) =>
+          userText.toLowerCase().includes(keyword.toLowerCase()),
+        )
+      ) {
         matches.push({
           category: category.name,
           nextStep: category.nextStep,
