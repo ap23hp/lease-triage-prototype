@@ -77,7 +77,7 @@ function App() {
           </p>
           <textarea
             id="situation"
-            rows="6"
+            rows="2"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="e.g. my landlord increased my service charge without explanation"
