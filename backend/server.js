@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const triageEnquiry = require("./triage.js");
-const categories = require("./categories.json");
 
 const app = express();
 const PORT = 3001;
@@ -19,11 +18,6 @@ app.post("/triage", (req, res) => {
   res.json(result);
 });
 
-// Returns just the category names, for the frontend to build category buttons
-app.get("/categories", (req, res) => {
-  const names = categories.map((c) => c.name);
-  res.json(names);
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

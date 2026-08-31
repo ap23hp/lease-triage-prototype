@@ -1,20 +1,24 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
+// Example questions shown as clickable buttons, inspired by LEASE's own
+// "Ask a question" tool. Each one contains real keywords so it works
+// seamlessly with the existing keyword-matching backend.
+const EXAMPLE_QUESTIONS = [
+  "My landlord increased my service charge",
+  "I want to complain about my landlord",
+  "How much would it cost to extend my lease?",
+  "I'm worried about fire safety in my building",
+  "I want to buy a bigger share of my home",
+  "I'm buying a leasehold flat",
+  "What are my rights as a leaseholder?"
+];
+
 function App() {
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
   const [submitted, setSubmitted] = useState(false);
-  const [categoryNames, setCategoryNames] = useState([]);
   const resultRef = useRef(null);
-
-  // Fetch the list of category names from the backend on page load,
-  // so the buttons always match what's in categories.json (single source of truth)
-  useEffect(() => {
-    fetch('http://localhost:3001/categories')
-      .then((res) => res.json())
-      .then((names) => setCategoryNames(names));
-  }, []);
 
   // Move focus to the result when it appears, so keyboard/screen reader
   // users are taken straight to the answer
@@ -42,10 +46,10 @@ function App() {
     setSubmitted(false);
   };
 
-  // When a category button is picked directly, fill the textbox with its
-  // name so the user can submit it through the same existing flow
-  const handlePickCategory = (name) => {
-    setText(name);
+  // When an example question is clicked, fill the textbox with it so the
+  // user can submit it through the same existing flow
+  const handlePickExample = (question) => {
+    setText(question);
   };
 
   return (
@@ -90,7 +94,7 @@ function App() {
                 <p>{result.nextStep}</p>
               </div>
               <p className="result-disclaimer">
-                General information only, not legal advice. If this category doesn't fit, choose a different one below.
+                General information only, not legal advice. If this category doesn't fit, try one of the example questions below.
               </p>
             </section>
           )}
@@ -98,24 +102,24 @@ function App() {
           {submitted && !result && (
             <section className="no-match-card" tabIndex={-1} ref={resultRef}>
               <h2>We couldn't identify a clear category</h2>
-              <p>Please try describing it differently, or choose one of the categories below.</p>
+              <p>Please try describing it differently, or choose one of the example questions below.</p>
             </section>
           )}
         </div>
 
         <section className="categories-section">
           <h2>Not sure what to write?</h2>
-          <p>Choose the area closest to your situation.</p>
+          <p>Choose the example closest to your situation.</p>
           <fieldset className="category-buttons">
-            <legend className="visually-hidden">Choose a category</legend>
-            {categoryNames.map((name) => (
+            <legend className="visually-hidden">Choose an example question</legend>
+            {EXAMPLE_QUESTIONS.map((question) => (
               <button
-                key={name}
+                key={question}
                 type="button"
-                onClick={() => handlePickCategory(name)}
-                className={`category-btn ${text === name ? 'selected' : ''}`}
+                onClick={() => handlePickExample(question)}
+                className={`category-btn ${text === question ? 'selected' : ''}`}
               >
-                {name}
+                {question}
               </button>
             ))}
           </fieldset>
