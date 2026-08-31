@@ -91,7 +91,7 @@ Done means: The page displays a free-text input where the user can describe thei
 
 **Ticket 8 - Fallback/edge case flow**
 
-**Done means:** When the free-text input doesn't match any category, the screen displays a message (e.g., "Sorry, we couldn't identify your category"), and the user can then click one of the example questions to try again.
+**Done means:** When the free-text input doesn't match any category, the screen displays a message (e.g., "Sorry, we couldn't identify your category"), and the user can then click one of the example questions to try again.When the text matches more than one category, a visible notice suggests describing each part of the situation separately, since only one category is shown.
 
 **Ticket 9 - Manual testing**  
 
