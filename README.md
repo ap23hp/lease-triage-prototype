@@ -11,7 +11,13 @@ This is not a legal advice engine. It uses simple, rule-based keyword matching t
 
 You will need Node.js installed.
 
-**1. Start the backend:**
+**1. Clone the repository:**
+
+git clone https://github.com/ap23hp/lease-triage-prototype.git
+cd lease-triage-prototype
+
+
+**2. Start the backend:**
 
 cd backend
 npm install
@@ -19,7 +25,7 @@ node server.js
 
 This runs the API on `http://localhost:3001`.
 
-**2. Start the frontend (in a separate terminal):**
+**3. Start the frontend (in a separate terminal):**
 
 cd frontend
 npm install
@@ -27,7 +33,7 @@ npm run dev
 
 This runs the app on `http://localhost:5173` (or the URL shown in your terminal).
 
-**3. Run the backend tests:**
+**4. Run the backend tests:**
 
 cd backend
 npm test
