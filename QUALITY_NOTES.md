@@ -68,6 +68,7 @@ While refactoring, I also moved all colours into CSS custom properties (`:root` 
 - At first, typing "INSURANCE" in capitals didn't match anything, only lowercase "insurance" worked. I fixed this by converting both the user's text and the keywords to lowercase before comparing.
 - Some keywords were too generic, like "landlord" or "flat" - they matched the wrong category because these words show up in lots of different situations. I fixed this by using more specific phrases instead of single common words.
 - I completely forgot to include the `explanation` field in the API response at first - I only caught this by testing it in the browser, not by reading the code. This tells me my testing needs to check the actual response shape too, not just whether a category was matched.
+- While doing a final fresh-clone test, I found that a question like "How much would it cost to extend my lease?" triggered the "this may also relate to other issues" warning, even though it only relates to one category (Lease extension) - it had just matched two different sub-scenarios within that same category. I fixed this by checking the number of *unique categories* matched, rather than the total number of matches, so the warning only appears when genuinely different categories are involved.
 
 **Things I'm not fully happy with:**
 
