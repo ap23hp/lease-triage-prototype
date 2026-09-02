@@ -39,9 +39,11 @@ function triageEnquiry(userText) {
     return null;
   }
 
+  const uniqueCategories = new Set(matches.map((m) => m.category));
+
   return {
     ...matches[0],
-    hasMultipleMatches: matches.length > 1,
+    hasMultipleMatches: uniqueCategories.size > 1,
   };
 }
 
